@@ -22,7 +22,7 @@ const Reducer = (state = initialState, action) => {
 };
 
 export const fetchgreeting = () => (dispatch) => {
-  fetch('http://127.0.0.1:3000/api/greetings')
+  fetch('http://localhost:3000/api/greetings')
     .then((response) => response.json())
     .then((data) => {
       dispatch(getgreeting(data.greeting));
